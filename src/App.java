@@ -7,5 +7,8 @@ public class App {
 
         // Je le fait se déplacer
         hero.move();
+
+        // Le hero attaque un ennemie
+        hero.attack("Christophe");
     }
 }

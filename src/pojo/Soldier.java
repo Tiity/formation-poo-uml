@@ -14,10 +14,13 @@ public class Soldier {
         this.moveSpeed = moveSpeed;
     }
 
+    public void attack(String enemyName) {
+        String attacking = String.format("%s a infligé %d de dégats à %s !", name, attackDamage, enemyName);
+        System.out.println(attacking);
+    }
+
     public void move() {
         String moving = String.format("%s a fait un bon de %d cases !", name, moveSpeed);
         System.out.println(moving);
-
-        // System.out.println(name + " a fait un bon de " + moveSpeed + " cases !");
     }
 }
