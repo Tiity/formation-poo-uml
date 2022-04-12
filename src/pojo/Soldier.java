@@ -1,26 +1,16 @@
 package pojo;
 
-public class Soldier {
+public class Soldier extends AbstractCharacter {
 
-    private int healthPoint;
-    private String name;
     private int attackDamage;
-    private int moveSpeed;
 
-    public Soldier(int healthPoint, String name, int attackDamage, int moveSpeed) {
-        this.healthPoint = healthPoint;
-        this.name = name;
+    public Soldier(String name, int healthPoint, int moveSpeed, int attackDamage) {
+        super(name, healthPoint, moveSpeed);
         this.attackDamage = attackDamage;
-        this.moveSpeed = moveSpeed;
     }
 
-    public void attack(String enemyName) {
-        String attacking = String.format("%s a infligé %d de dégats à %s !", name, attackDamage, enemyName);
+    public void attack(AbstractCharacter enemy) {
+        String attacking = String.format("%s a infligé %d de dégats à %s !", name, attackDamage, enemy.getName());
         System.out.println(attacking);
-    }
-
-    public void move() {
-        String moving = String.format("%s a fait un bon de %d cases !", name, moveSpeed);
-        System.out.println(moving);
     }
 }
