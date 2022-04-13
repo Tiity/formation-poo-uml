@@ -1,6 +1,6 @@
 package pojo;
 
-public abstract class AbstractCharacter {
+public abstract class AbstractCharacter implements ICharacter {
 
     protected String name;
     protected int healthPoint;
@@ -12,6 +12,7 @@ public abstract class AbstractCharacter {
         this.moveSpeed = moveSpeed;
     }
 
+    @Override
     public void speak(String replique) {
         String text = String.format("%s dit: \"%s\"", name, replique);
         System.out.println(text);
